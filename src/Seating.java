@@ -1,4 +1,4 @@
-
-public class Seating {
+public class Seating 
+{
 
 }
