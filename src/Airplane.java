@@ -13,4 +13,6 @@ public class Airplane
 			}
 		}
 	}
+	
+	System.out.print("Bob is cool");
 }
