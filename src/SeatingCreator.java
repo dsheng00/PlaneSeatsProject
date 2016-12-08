@@ -16,7 +16,7 @@ public class SeatingCreator
 			int num = sc.nextInt();
 			//method that takes the number of people
 			System.out.print("Business or economy?");
-			//chooses bus or economy
+			//chooses business or economy
 			System.out.print("Do you have any seating preference? "
 								+ "Window, aisle, or middle? ");
 			String pref = sc.next();
