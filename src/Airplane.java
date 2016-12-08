@@ -1,8 +1,8 @@
-public class Seating 
+public class Airplane 
 {
 	private int[][] rows = new int[5][];
 	
-	public Seating()
+	public Airplane()
 	{
 		for (int rowIndex = 0; rowIndex < 5; rowIndex++) // Assigns all the seats to 0 (Unoccupied)
 		{
