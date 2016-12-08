@@ -2,8 +2,6 @@
 ### **By Matthew Guo, Tenzin Loden, David Sheng, Eli Zheng**
 > Advanced Placement Computer Science A, Mr. Deppe
 
-This program receives inputs of your preferences towards your seating on a plane flight.
-
 **To-do**:
   - [ ] Airplane class
   - [ ] Seating class
