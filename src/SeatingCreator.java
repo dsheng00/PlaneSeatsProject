@@ -4,17 +4,25 @@ public class SeatingCreator
 {
 	public static void main(String args[])
 	{
-		while(SENTINEL != ) //sentinel
+		final String SENTINEL = "N";
+		String response = "";
+		Scanner sc = new Scanner(System.in);
+
+		while (!response.equalsIgnoreCase(SENTINEL)) //sentinel
+		{	
 			//some display method displaying the airplane layout
-			Scanner sc = new Scanner(System.in);
 			System.out.print("Please enter the number of seats "
 								+ "you would like to reserve: ");
 			int num = sc.nextInt();
 			//method that takes the number of people
+			System.out.print("Business or economy?");
+			//chooses bus or economy
 			System.out.print("Do you have any seating preference? "
-								+ "Window, aisle, or middle?");
-			//method that makes preferences
+								+ "Window, aisle, or middle? ");
+			String pref = sc.next();
+			//method that makes preferences using contain()
 			//method(s) assigns seats
-			
+		}
+		sc.close();	
 	}
 }
