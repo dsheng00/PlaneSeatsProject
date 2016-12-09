@@ -27,13 +27,21 @@ public class Airplane
 		}
 	}
 	
-	public int getFirstClassSeatValue(int x, int y) // Checks if seat is occupied or unoccupied
+	public int getSeatValue(String seatingClass, int x, int y) // Checks if seat is occupied or unoccupied
 	{
-		return firstClassSeats[x][y];
+		if (seatingClass.equals("first"))
+		{
+			return firstClassSeats[x][y];
+		}
+		return economyClassSeats[x][y];
 	}
 	
-	public int getEconomyClassSeatValue(int x, int y)
+	public void occupySeat(String seatingClass, int x, int y)
 	{
-		return economyClassSeats[x][y];
+		if (seatingClass.equals("first"))
+		{
+			firstClassSeats[x][y] = 1;
+		}
+		economyClassSeats[x][y] = 1;
 	}
 }
