@@ -13,6 +13,18 @@
   - [ ] Display class
     - [ ] Loop for display - method
   - [ ] SeatingCreator class
+    - [x] Loop for the entire output
     - [ ] Loop or array of names
 
 Use ```close()``` when using scanners :+1:
+
+####Proposed layout:
+ 	 #s #s #s #s
+row
+row
+row
+row
+row
+row
+
+And so on
