@@ -1,5 +1,5 @@
 
-public class Seating //methods that assign seats
+public class Seating
 {
 
 }

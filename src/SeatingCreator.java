@@ -15,13 +15,21 @@ public class SeatingCreator
 								+ "you would like to reserve: ");
 			int num = sc.nextInt();
 			//method that takes the number of people
-			System.out.print("Business or economy?");
+			System.out.print("Please enter the names that the seats will go under "
+					+ "(in order) ");
+			String names = sc.next(); //correspond each seat with a name
+			//turn the list of names into an array
+			//loop for the below questions for each name?
+			System.out.print("Business or economy for names?"); 
 			//chooses business or economy
 			System.out.print("Do you have any seating preference? "
-								+ "Window, aisle, or middle? ");
+					+ "Window, aisle, or middle? ");
 			String pref = sc.next();
 			//method that makes preferences using contain()
 			//method(s) assigns seats
+			//print the seats given with corresponding names
+			System.out.print("Continue? Y/N: ");
+			response = sc.next();
 		}
 		sc.close();	
 	}

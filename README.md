@@ -13,6 +13,6 @@
   - [ ] Display class
     - [ ] Loop for display - method
   - [ ] SeatingCreator class
-    - [ ] While loop
+    - [ ] Loop or array of names
 
 Use ```close()``` when using scanners :+1:
