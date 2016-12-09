@@ -4,11 +4,11 @@ public class SeatingCreator
 {
 	public static void main(String args[])
 	{
-		final String SENTINEL = "N";
+		final String SENTINEL = "N"; //change depending on the question
 		String response = "";
 		Scanner sc = new Scanner(System.in);
 
-		while (!response.equalsIgnoreCase(SENTINEL)) //sentinel
+		while (!response.equalsIgnoreCase(SENTINEL)) 
 		{	
 			//some display method displaying the airplane layout
 			System.out.print("Please enter the number of seats "
