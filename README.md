@@ -1,8 +1,8 @@
 # Plane Seats Project
-#### **By Matthew Guo, Tenzin Loden, David Sheng, Eli Zheng**
+**By Matthew Guo, Tenzin Loden, David Sheng, Eli Zheng**
 > Advanced Placement Computer Science A, Mr. Deppe
 
-**To-do**:
+####To-do:
   - [ ] Airplane class
   - [ ] Seating class
     - [ ] Preference method
