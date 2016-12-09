@@ -19,7 +19,7 @@
 Use ```close()``` when using scanners :+1:
 
 ####Proposed layout:
- 	 	column column column aisle column column column
+ 	 			column column column aisle column column column
 - row
 - row
 - row

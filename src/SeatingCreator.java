@@ -27,7 +27,7 @@ public class SeatingCreator
 			String pref = sc.next();
 			//method that makes preferences using contain()
 			//method(s) assigns seats
-			//print the seats given with corresponding names
+			//print the layout given with corresponding names
 			System.out.print("Continue? Y/N: ");
 			response = sc.next();
 		}
