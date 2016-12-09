@@ -19,12 +19,12 @@
 Use ```close()``` when using scanners :+1:
 
 ####Proposed layout:
- 	 #s #s #s #s
-row
-row
-row
-row
-row
-row
+ 	 	column column column aisle column column column
+- row
+- row
+- row
+- row
+- row
+- row
 
-And so on
+And so on, and a divider for the two different clases somewhere
