@@ -16,7 +16,7 @@ public class SeatingCreator
 			int num = sc.nextInt();
 			//method that takes the number of people
 			System.out.print("Please enter the names that the seats will go under "
-					+ "(in order) ");
+					+ "(in order): ");
 			String names = sc.next(); //correspond each seat with a name
 			//turn the list of names into an array
 			//loop for the below questions for each name?

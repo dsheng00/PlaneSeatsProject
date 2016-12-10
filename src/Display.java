@@ -2,23 +2,34 @@ public class Display
 {
 	public static void printSeating(Airplane airplane)
 	{
-		for (int i = 0; i < airplane.NUMBER_OF_FIRST_CLASS_ROWS; i++)
+		char c = 'A';
+		while (c <= 'F') 
 		{
-			for (int j = 0; j < airplane.NUMBER_OF_FIRST_CLASS_AISLES; j++)
-			{
-				System.out.print(intToLetter(airplane.getSeatValue("first", i, j)) + " ");
+			for (int i = 0; i < airplane.NUMBER_OF_FIRST_CLASS_ROWS; i++)
+			{	
+				System.out.print(c + " ");
+				for (int j = 0; j < airplane.NUMBER_OF_FIRST_CLASS_AISLES; j++)
+				{
+					System.out.print(intToLetter(airplane.getSeatValue("first", i, j)) + " ");
+				}
+				c++;
+				System.out.println();
 			}
-			System.out.println();
 		}
 		System.out.println();
-
-		for (int i = 0; i < airplane.NUMBER_OF_ECONOMY_CLASS_ROWS; i++)
-		{
-			for (int j = 0; j < airplane.NUMBER_OF_ECONOMY_CLASS_AISLES; j++)
+		
+		while(c <= 'U')
+		{		
+			for (int i = 0; i < airplane.NUMBER_OF_ECONOMY_CLASS_ROWS; i++)
 			{
-				System.out.print(intToLetter(airplane.getSeatValue("economy", i, j)) + " ");
+				System.out.print(c + " ");
+				for (int j = 0; j < airplane.NUMBER_OF_ECONOMY_CLASS_AISLES; j++)
+				{
+					System.out.print(intToLetter(airplane.getSeatValue("economy", i, j)) + " ");
+				}
+				System.out.println();
+				c++;
 			}
-			System.out.println();
 		}
 	}
 	

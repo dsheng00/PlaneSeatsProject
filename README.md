@@ -7,12 +7,12 @@
 Use ```close()``` when using scanners :+1:
 
 ####Proposed layout:
- 	 			column column column aisle column column column
-- row
-- row
-- row
-- row
-- row
-- row
+ 	 			column# column# column# aisle column# column# column#
+- row letter
+- row letter
+- row letter
+- row letter
+- row letter
+- row letter
 
 And so on, and a divider for the two different clases somewhere
