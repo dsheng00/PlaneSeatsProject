@@ -11,7 +11,7 @@ public class SeatingCreator
 	
 	public static void main(String args[])
 	{
-		final String SENTINEL = "N"; //change depending on the question
+		final String SENTINEL = "N";
 		String response = "";
 		Scanner sc = new Scanner(System.in);
 		
@@ -21,24 +21,21 @@ public class SeatingCreator
 		while (!response.equalsIgnoreCase(SENTINEL)) 
 		{	
 			Display.printSeating(plane);
-			System.out.print("Please enter the number of seats "
-								+ "you would like to reserve: ");
-			int num = sc.nextInt();
-			//method that takes the number of people
-			System.out.print("Please enter the names that the seats will go under "
-					+ "(in order): ");
-			String names = sc.next(); //correspond each seat with a name
+			System.out.print("Please enter the name(s) you would like to "
+					+ "reserve the seat(s) under: ");
+			String names = sc.next(); 
 			namesToArray(names);
 			
-			for(String element : namesList) //runs through the protocol for each passenger
+			for(String element : namesList)
 			{
 				System.out.print("Business or economy for " + element + "? "); 
 				String flightClass = sc.next();
 				System.out.print("Do you have any seating preference? "
 						+ "Window, aisle, or middle? ");
 				String pref = sc.next();
-				//method that makes preferences using contain()
-				//method assigns seats
+				//TODO method that makes preferences using contain() and finds the right seat
+				//TODO method assigns seats
+				//TODO correspond each seat with a name
 			}
 			
 			System.out.print("Continue? Y/N: ");
