@@ -42,8 +42,11 @@ public class Airplane
 	{
 		if (seatingClass.equals("first"))
 		{
-			firstClassSeats[x][y] = 1;
+			firstClassSeats[x - 1][y - 1] = 1; // Since array indices start at 0, 1 is subtracted
 		}
-		economyClassSeats[x][y] = 1;
+		else
+		{
+			economyClassSeats[x - 1][y - 1] = 1;
+		}
 	}
 }
