@@ -4,17 +4,19 @@ public class Airplane
 	public final int NUMBER_OF_FIRST_CLASS_AISLES = 4;
 	public final int NUMBER_OF_ECONOMY_CLASS_ROWS = 15;
 	public final int NUMBER_OF_ECONOMY_CLASS_AISLES = 6;
-	private int[][] firstClassSeats = new int[NUMBER_OF_FIRST_CLASS_ROWS][];
-	private int[][] economyClassSeats = new int[NUMBER_OF_ECONOMY_CLASS_ROWS][];
+	private int[][] firstClassSeats;
+	private int[][] economyClassSeats;
 	
 	public Airplane()
 	{
+		firstClassSeats = new int[NUMBER_OF_FIRST_CLASS_ROWS][];
+		economyClassSeats = new int[NUMBER_OF_ECONOMY_CLASS_ROWS][];
 		for (int rowIndex = 0; rowIndex < NUMBER_OF_FIRST_CLASS_ROWS; rowIndex++)
 		{
 			firstClassSeats[rowIndex] = new int[NUMBER_OF_FIRST_CLASS_AISLES];
 			for (int aisleIndex = 0; aisleIndex < NUMBER_OF_FIRST_CLASS_AISLES; aisleIndex++)
 			{
-				firstClassSeats[aisleIndex][rowIndex] = 0; // Assigns all the first class seats to 0 (Unoccupied)
+				firstClassSeats[rowIndex][aisleIndex] = 0; // Assigns all the first class seats to 0 (Unoccupied)
 			}
 		}
 		for (int rowIndex = 0; rowIndex < NUMBER_OF_ECONOMY_CLASS_ROWS; rowIndex++)
@@ -22,7 +24,7 @@ public class Airplane
 			economyClassSeats[rowIndex] = new int [NUMBER_OF_ECONOMY_CLASS_AISLES];
 			for (int aisleIndex = 0; aisleIndex < NUMBER_OF_ECONOMY_CLASS_AISLES; aisleIndex++)
 			{
-				economyClassSeats[aisleIndex][rowIndex] = 0; // Assigns all the economy class seats to 0
+				economyClassSeats[rowIndex][aisleIndex] = 0; // Assigns all the economy class seats to 0
 			}
 		}
 	}
@@ -36,7 +38,7 @@ public class Airplane
 		return economyClassSeats[x][y];
 	}
 	
-	public void occupySeat(String seatingClass, int x, int y)
+	public void occupySeat(String seatingClass, int x, int y) // Occupies the seat in the given seat coordinate
 	{
 		if (seatingClass.equals("first"))
 		{
