@@ -15,38 +15,39 @@ public class SeatingCreator
 		String response = "";
 		Scanner sc = new Scanner(System.in);
 		
-		Display seating = new Display();
 		Airplane plane = new Airplane();
 
 		while (!response.equalsIgnoreCase(SENTINEL)) 
 		{	
 			Display.printSeating(plane);
+			System.out.println();
 			System.out.print("Please enter the name(s) you would like to "
 					+ "reserve the seat(s) under: ");
-			String names = sc.next(); 
+			String names = sc.nextLine(); 
 			namesToArray(names);
 			
 			for(String element : namesList)
 			{
 				System.out.print("Business or economy for " + element + "? "); 
-				String flightClass = sc.next();
+				String flightClass = sc.nextLine();
 				System.out.print("Do you have any seating preference? "
 						+ "Window, aisle, or middle? ");
-				String pref = sc.next();
+				String pref = sc.nextLine();
 				//TODO method that makes preferences using contain() and finds the right seat
 				//TODO method assigns seats
 				//TODO correspond each seat with a name
 			}
 			
 			System.out.print("Continue? Y/N: ");
-			response = sc.next();
+			response = sc.nextLine();
+			System.out.println();
 		}
 		sc.close();	
 	}
 	
 	private static void namesToArray(String names)
 	{
-		namesList = names.split(", ") ;
+		namesList = names.split(", ");
 	}
 	
 	private String[] getNamesList()
