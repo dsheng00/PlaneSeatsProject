@@ -28,7 +28,7 @@ public class SeatingCreator
 			
 			for(String element : namesList)
 			{
-				System.out.print("Business or economy for " + element + "? "); 
+				System.out.print("First class or economy for " + element + "? "); 
 				String flightClass = sc.nextLine();
 				System.out.print("Do you have any seating preference? "
 						+ "Window, aisle, or middle? ");
