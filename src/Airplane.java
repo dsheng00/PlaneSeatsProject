@@ -39,14 +39,26 @@ public class Airplane
 	}
 	
 	public void occupySeat(String seatingClass, int x, int y) // Occupies the seat in the given seat coordinate
-	{
-		if (seatingClass.equals("first"))
+	{ //add name later?
+		if (seatingClass.substring(0, 5).equals("first") || seatingClass.equals("1st")) 
 		{
 			firstClassSeats[x - 1][y - 1] = 1; // Since array indices start at 0, 1 is subtracted
 		}
 		else
 		{
 			economyClassSeats[x - 1][y - 1] = 1;
+		}
+	}
+	
+	public void removeSeat(String seatingClass, int x, int y) //might have to use name too
+	{
+		if (seatingClass.substring(0, 5).equals("first") || seatingClass.equals("1st")) 
+		{
+			firstClassSeats[x - 1][y - 1] = 0; // Since array indices start at 0, 1 is subtracted
+		}
+		else
+		{
+			economyClassSeats[x - 1][y - 1] = 0;
 		}
 	}
 }
