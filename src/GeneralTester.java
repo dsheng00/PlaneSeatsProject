@@ -1,4 +1,4 @@
-public class SeatingArrayTester 
+public class GeneralTester 
 {
 	public static void main(String[] args)
 	{

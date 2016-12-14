@@ -31,7 +31,7 @@ public class Airplane
 	
 	public int getSeatValue(String seatingClass, int x, int y) // Checks if seat is occupied or unoccupied
 	{
-		if (seatingClass.equals("first"))
+		if (seatingClass.equalsIgnoreCase("first"))
 		{
 			return firstClassSeats[x][y];
 		}
