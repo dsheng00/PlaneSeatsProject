@@ -23,32 +23,47 @@ public class SeatingCreator
 			System.out.println();
 			System.out.print("Would you like to choose or automatically assign seats? ");
 			String reChoice = sc.nextLine();
-			if (reChoice.equalsIgnoreCase("choose"))
+			
+			if (reChoice.substring(0, 6).equalsIgnoreCase("choose"))
 			{
-				System.out.print("Please enter the seat name(s) you would like to reserve: ");
+				System.out.print("Please enter the name(s) you would like to "
+						+ "reserve the seats under: ");
 				String names = sc.nextLine(); 
 				namesToArray(names);
 				
 				for(String element : namesList)
 				{
 					System.out.print("First class or economy for " + element + "? "); 
-					String pref = sc.nextLine();
+					String flightClass = sc.nextLine();
+					System.out.print("PLease enter your choice of row: ");
+					String row = sc.nextLine();
+					System.out.print("Please enter your choice of column: ");
+					String column = sc.nextLine();
+				}
+			}
+			else if (reChoice.substring(0, 4).equalsIgnoreCase("auto"))
+			{
+				System.out.print("Please enter the name(s) you would like to "
+						+ "reserve the seats under: ");
+				String names = sc.nextLine(); 
+				namesToArray(names);
+				
+				for(String element : namesList)
+				{
+					System.out.print("First class or economy for " + element + "? "); 
+					String flightClass = sc.nextLine();
 					//TODO method that makes preferences using contain() and finds the right seat
 					//TODO method assigns seats
 					//TODO correspond each seat with a name
+					System.out.print("Do you have any seating preference? "
+							+ "Window, aisle, or middle? ");
+					String pref = sc.nextLine();
 				}
-			}
-			
-			else if (reChoice.equalsIgnoreCase("automatically assign seats"))
-			{
-				String flightClass = sc.nextLine();
-				System.out.println("Do you have any seating preference? "
-					+ "Window, aisle, or middle? ");
-				
 			}
 			else
 			{
-				System.out.println("That is not a valid option.");
+				System.out.println("That is not a valid option. "
+						+ "We will reirect you to our non-existencehelp center.");
 			}
 			
 			System.out.print("Continue? Y/N: ");
