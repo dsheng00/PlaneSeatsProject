@@ -14,17 +14,16 @@ public class Airplane
 		for (int rowIndex = 0; rowIndex < NUMBER_OF_FIRST_CLASS_ROWS; rowIndex++)
 		{
 			firstClassSeats[rowIndex] = new Seat[NUMBER_OF_FIRST_CLASS_AISLES];
-			for (int aisleIndex = 0; aisleIndex < NUMBER_OF_FIRST_CLASS_AISLES; aisleIndex++)
+			for (int aisleIndex = 0; aisleIndex < NUMBER_OF_FIRST_CLASS_ROWS; aisleIndex++)
 			{
-				firstClassSeats[rowIndex][aisleIndex].occupy(); // Assigns all the first class seats to unoccupied
+				firstClassSeats[rowIndex][aisleIndex] = new Seat();
 			}
 		}
 		for (int rowIndex = 0; rowIndex < NUMBER_OF_ECONOMY_CLASS_ROWS; rowIndex++)
 		{
 			economyClassSeats[rowIndex] = new Seat[NUMBER_OF_ECONOMY_CLASS_AISLES];
-			for (int aisleIndex = 0; aisleIndex < NUMBER_OF_ECONOMY_CLASS_AISLES; aisleIndex++)
+			for (int aisleIndex = 0; aisleIndex < NUMBER_OF_ECONOMY_CLASS_ROWS; aisleIndex++)
 			{
-				economyClassSeats[rowIndex][aisleIndex].occupy(); // Assigns all the economy class seats to unoccupied
-			}
+				economyClassSeats[rowIndex][aisleIndex] = new Seat();
 		}
 	}
