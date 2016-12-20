@@ -29,15 +29,27 @@ public class Airplane
 		}
 	}
 	
-	public void occupySeat(String passengerName, String class, int row, int column)
+	public void occupySeat(String passengerName, String seatingClass, int row, int column)
 	{
-		if (class.equalsIgnoreCase("first"))
+		if (seatingClass.equalsIgnoreCase("first"))
 		{
 			firstClassSeats[row - 1][column - 1].occupy(passengerName);
 		}
-		else if (class.equalsIgnoreCase("economy"))
+		else if (seatingClass.equalsIgnoreCase("economy"))
 		{
 			economyClassSeats[row - 1][column - 1].occupy(passengerName);
+		}
+	}
+	
+	public void removeSeat(String seatingClass, int row, int column)
+	{
+		if (seatingClass.equalsIgnoreCase("first")
+		{
+			firstClassSeats[row - 1][column - 1].unoccupy();
+		}
+		else if (seatingClass.equalsIgnoreCase("economy"))
+		{
+			economyClassSeats[row - 1][column - 1].unoccupy();
 		}
 	}
 }
