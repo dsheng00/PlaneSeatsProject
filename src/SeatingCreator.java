@@ -39,6 +39,7 @@ public class SeatingCreator
 					String row = sc.nextLine();
 					System.out.print("Please enter your choice of column: ");
 					String column = sc.nextLine();
+					
 				}
 			}
 			else if (reChoice.substring(0, 4).equalsIgnoreCase("auto"))
@@ -63,7 +64,7 @@ public class SeatingCreator
 			else
 			{
 				System.out.println("That is not a valid option. "
-						+ "We will reirect you to our non-existencehelp center.");
+						+ "We will reirect you to our non-existence help center.");
 			}
 			
 			System.out.print("Continue? Y/N: ");
@@ -82,5 +83,10 @@ public class SeatingCreator
 	private String[] getNamesList()
 	{
 		return namesList;
+	}
+	
+	private int rowToInt(String row)
+	{
+		
 	}
 }
