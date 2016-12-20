@@ -15,6 +15,12 @@ public class Seat
 		passengerName = name;
 	}
 
+	public void unOccupy()
+	{
+		occupied = false;
+		passengerName = "";
+	}
+	
 	public boolean checkOccupancy()
 	{
 		return occupied;
