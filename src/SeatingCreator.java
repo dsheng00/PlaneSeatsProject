@@ -49,9 +49,9 @@ public class SeatingCreator
 				String names = sc.nextLine();
 				namesToArray(names);
 
-				for(String element : namesList)
+				for(String name : namesList)
 				{
-					System.out.print("First class or economy for " + element + "? ");
+					System.out.print("First class or economy for " + name + "? ");
 					String flightClass = sc.nextLine();
 					//TODO method that makes preferences using contain() and finds the right seat
 					//TODO method assigns seats
@@ -64,7 +64,8 @@ public class SeatingCreator
 			else
 			{
 				System.out.println("That is not a valid option. "
-						+ "We will reirect you to our non-existence help center.");
+						+ "We will reirect you to our non-existence help center"
+						+ " for further instructions.");
 			}
 
 			System.out.print("Continue? Y/N: ");
