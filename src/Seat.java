@@ -15,7 +15,7 @@ public class Seat
 		passengerName = name;
 	}
 
-	public void unOccupy()
+	public void unoccupy()
 	{
 		occupied = false;
 		passengerName = "";
