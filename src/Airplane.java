@@ -28,4 +28,16 @@ public class Airplane
 			}
 		}
 	}
+	
+	public void occupySeat(String passengerName, String class, int row, int column)
+	{
+		if (class.equalsIgnoreCase("first"))
+		{
+			firstClassSeats[row - 1][column - 1].occupy(passengerName);
+		}
+		else if (class.equalsIgnoreCase("economy"))
+		{
+			economyClassSeats[row - 1][column - 1].occupy(passengerName);
+		}
+	}
 }
