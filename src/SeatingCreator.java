@@ -31,15 +31,15 @@ public class SeatingCreator
 				String names = sc.nextLine();
 				namesToArray(names);
 
-				for(String element : namesList)
+				for(String name : namesList)
 				{
-					System.out.print("First class or economy for " + element + "? ");
+					System.out.print("First class or economy for " + name + "? ");
 					String flightClass = sc.nextLine();
 					System.out.print("Please enter your choice of row: ");
 					String row = sc.nextLine();
 					System.out.print("Please enter your choice of column: ");
 					int column = sc.nextInt();
-					plane. [rowToInt(row)][column]; //change when new class is added
+					plane.occupySeat(name, flightClass, rowToInt(row), column); //change when new class is added
 				}
 			}
 			else if (reChoice.substring(0, 4).equalsIgnoreCase("auto"))

@@ -16,7 +16,7 @@ public class Airplane
 			firstClassSeats[rowIndex] = new Seat[NUMBER_OF_FIRST_CLASS_AISLES];
 			for (int aisleIndex = 0; aisleIndex < NUMBER_OF_FIRST_CLASS_ROWS; aisleIndex++)
 			{
-				firstClassSeats[rowIndex][aisleIndex] = new Seat();
+				firstClassSeats[rowIndex][aisleIndex] = new Seat(); //runtime error
 			}
 		}
 		for (int rowIndex = 0; rowIndex < NUMBER_OF_ECONOMY_CLASS_ROWS; rowIndex++)
@@ -24,18 +24,22 @@ public class Airplane
 			economyClassSeats[rowIndex] = new Seat[NUMBER_OF_ECONOMY_CLASS_AISLES];
 			for (int aisleIndex = 0; aisleIndex < NUMBER_OF_ECONOMY_CLASS_ROWS; aisleIndex++)
 			{
-				economyClassSeats[rowIndex][aisleIndex] = new Seat();
+				economyClassSeats[rowIndex][aisleIndex] = new Seat(); //runtime error
 			}
 		}
 	}
 	
 	public void occupySeat(String passengerName, String seatingClass, int row, int column)
 	{
-		if (seatingClass.equalsIgnoreCase("first"))
+		if (seatingClass.equalsIgnoreCase("first")
+			|| seatingClass.equalsIgnoreCase("1st"))
 		{
 			firstClassSeats[row - 1][column - 1].occupy(passengerName);
 		}
-		else if (seatingClass.equalsIgnoreCase("economy"))
+		else if (seatingClass.equalsIgnoreCase("economy")
+				 || seatingClass.equalsIgnoreCase("econ")
+				 || seatingClass.equalsIgnoreCase("second")
+				 || seatingClass.equalsIgnoreCase("2nd"))
 		{
 			economyClassSeats[row - 1][column - 1].occupy(passengerName);
 		}
@@ -44,12 +48,18 @@ public class Airplane
 	public void removeSeat(String seatingClass, int row, int column)
 	{
 		if (seatingClass.equalsIgnoreCase("first")
+			|| seatingClass.equalsIgnoreCase("1st"))
 		{
 			firstClassSeats[row - 1][column - 1].unoccupy();
 		}
-		else if (seatingClass.equalsIgnoreCase("economy"))
+		else if (seatingClass.equalsIgnoreCase("economy")
+				 || seatingClass.equalsIgnoreCase("econ")
+				 || seatingClass.equalsIgnoreCase("second")
+				 || seatingClass.equalsIgnoreCase("2nd"))
 		{
 			economyClassSeats[row - 1][column - 1].unoccupy();
 		}
 	}
+	
+	//TODO getSeatValue
 }
