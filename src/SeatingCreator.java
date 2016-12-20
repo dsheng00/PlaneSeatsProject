@@ -24,7 +24,7 @@ public class SeatingCreator
 			System.out.print("Would you like to choose or automatically assign seats? ");
 			String reChoice = sc.nextLine();
 			
-			if (reChoice.substring(0, 6).equalsIgnoreCase("choose"))
+			if (reChoice.equalsIgnoreCase("choose"))
 			{
 				System.out.print("Please enter the name(s) you would like to "
 						+ "reserve the seats under: ");
@@ -35,11 +35,12 @@ public class SeatingCreator
 				{
 					System.out.print("First class or economy for " + element + "? "); 
 					String flightClass = sc.nextLine();
-					System.out.print("PLease enter your choice of row: ");
+					System.out.print("Please enter your choice of row: ");
 					String row = sc.nextLine();
-					System.out.print("Please enter your choice of column: ");
-					String column = sc.nextLine();
 					
+					System.out.print("Please enter your choice of column: ");
+					int column = sc.nextInt();
+					plane.occupySeat(flightClass, rowToInt(row), column);
 				}
 			}
 			else if (reChoice.substring(0, 4).equalsIgnoreCase("auto"))
@@ -80,13 +81,9 @@ public class SeatingCreator
 		namesList = names.split(", ");
 	}
 	
-	private String[] getNamesList()
+	private static int rowToInt(String row)
 	{
-		return namesList;
-	}
-	
-	private int rowToInt(String row)
-	{
-		
+		char c = row.charAt(0);
+		return Character.getNumericValue(c);
 	}
 }
