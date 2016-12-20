@@ -25,5 +25,7 @@ public class Airplane
 			for (int aisleIndex = 0; aisleIndex < NUMBER_OF_ECONOMY_CLASS_ROWS; aisleIndex++)
 			{
 				economyClassSeats[rowIndex][aisleIndex] = new Seat();
+			}
 		}
 	}
+}

@@ -39,7 +39,7 @@ public class SeatingCreator
 					String row = sc.nextLine();
 					System.out.print("Please enter your choice of column: ");
 					int column = sc.nextInt();
-					plane.occupySeat(flightClass, rowToInt(row), column); //change when new class is added
+					plane. [rowToInt(row)][column]; //change when new class is added
 				}
 			}
 			else if (reChoice.substring(0, 4).equalsIgnoreCase("auto"))
