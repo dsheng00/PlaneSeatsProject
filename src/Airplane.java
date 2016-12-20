@@ -14,17 +14,17 @@ public class Airplane
 		for (int rowIndex = 0; rowIndex < NUMBER_OF_FIRST_CLASS_ROWS; rowIndex++)
 		{
 			firstClassSeats[rowIndex] = new Seat[NUMBER_OF_FIRST_CLASS_AISLES];
-			for (int aisleIndex = 0; aisleIndex < NUMBER_OF_FIRST_CLASS_ROWS; aisleIndex++)
+			for (int aisleIndex = 0; aisleIndex < NUMBER_OF_FIRST_CLASS_AISLES; aisleIndex++)
 			{
-				firstClassSeats[rowIndex][aisleIndex] = new Seat(); //runtime error
+				firstClassSeats[rowIndex][aisleIndex] = new Seat();
 			}
 		}
 		for (int rowIndex = 0; rowIndex < NUMBER_OF_ECONOMY_CLASS_ROWS; rowIndex++)
 		{
 			economyClassSeats[rowIndex] = new Seat[NUMBER_OF_ECONOMY_CLASS_AISLES];
-			for (int aisleIndex = 0; aisleIndex < NUMBER_OF_ECONOMY_CLASS_ROWS; aisleIndex++)
+			for (int aisleIndex = 0; aisleIndex < NUMBER_OF_ECONOMY_CLASS_AISLES; aisleIndex++)
 			{
-				economyClassSeats[rowIndex][aisleIndex] = new Seat(); //runtime error
+				economyClassSeats[rowIndex][aisleIndex] = new Seat();
 			}
 		}
 	}
@@ -49,8 +49,7 @@ public class Airplane
 	public void removeSeat(String seatingClass, int row, int column)
 	{
 		if (seatingClass.equalsIgnoreCase("first")
-			|| seatingClass.equalsIgnoreCase("1st")
-			|| seatingClass.equalsIgnoreCase("business"))
+			|| seatingClass.equalsIgnoreCase("1st"))
 		{
 			firstClassSeats[row - 1][column - 1].unoccupy();
 		}
@@ -63,5 +62,20 @@ public class Airplane
 		}
 	}
 	
-	//TODO getSeatValue
+	public boolean checkOccupied(String seatingClass, int row, int column)
+	{
+		if (seatingClass.equalsIgnoreCase("first")
+			|| seatingClass.equalsIgnoreCase("1st"))
+		{
+			return firstClassSeats[row][column].checkOccupancy();
+		}
+		else if (seatingClass.equalsIgnoreCase("economy")
+				|| seatingClass.equalsIgnoreCase("econ")
+				|| seatingClass.equalsIgnoreCase("second")
+				|| seatingClass.equalsIgnoreCase("2nd"))
+		{
+			return economyClassSeats[row][column].checkOccupancy();
+		}
+		return false;
+	}
 }

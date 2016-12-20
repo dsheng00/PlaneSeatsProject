@@ -9,7 +9,7 @@ public class Display
 			System.out.print(c + " ");
 			for (int j = 0; j < airplane.NUMBER_OF_FIRST_CLASS_AISLES; j++)
 			{
-				System.out.print(intToLetter(airplane.getSeatValue("first", i, j)) + " ");
+				System.out.print(boolToLetter(airplane.checkOccupied("first", i, j)) + " ");
 			}
 			System.out.println();
 			c++;
@@ -22,16 +22,16 @@ public class Display
 			System.out.print(c + " ");
 			for (int j = 0; j < airplane.NUMBER_OF_ECONOMY_CLASS_AISLES; j++)
 			{
-				System.out.print(intToLetter(airplane.getSeatValue("economy", i, j)) + " ");
+				System.out.print(boolToLetter(airplane.checkOccupied("economy", i, j)) + " ");
 			}
 			System.out.println();
 			c++;
 		}
 	}
 	
-	public static String intToLetter(int x)
+	public static String boolToLetter(boolean x)
 	{
-		if (x == 1)
+		if (x)
 		{
 			return "O"; // "O" for occupied
 		}
