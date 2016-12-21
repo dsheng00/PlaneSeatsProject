@@ -32,8 +32,7 @@ public class Airplane
 	public void occupySeat(String passengerName, String seatingClass, int row, int column)
 	{
 		if (seatingClass.equalsIgnoreCase("first")
-			|| seatingClass.equalsIgnoreCase("1st")
-			|| seatingClass.equalsIgnoreCase("business"))
+			|| seatingClass.equalsIgnoreCase("1st"))
 		{
 			firstClassSeats[row - 1][column - 1].occupy(passengerName);
 		}
