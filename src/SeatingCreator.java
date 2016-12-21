@@ -23,7 +23,7 @@ public class SeatingCreator
 			System.out.println();
 			System.out.print("Would you like to choose or automatically assign seats? ");
 			String reChoice = sc.nextLine();
-
+			
 			if (reChoice.equalsIgnoreCase("choose")
 					|| reChoice.equalsIgnoreCase("manual"))
 			{
@@ -40,7 +40,8 @@ public class SeatingCreator
 					String row = sc.nextLine();
 					System.out.print("Please enter your choice of column: ");
 					String column = sc.nextLine();
-					plane.occupySeat(name, flightClass, rowToInt(row), Integer.parseInt(column));
+					plane.occupySeat(name, flightClass, rowToInt(row), 
+							Integer.parseInt(column));
 				}
 			}
 			else if (reChoice.substring(0, 4).equalsIgnoreCase("auto"))
@@ -54,8 +55,8 @@ public class SeatingCreator
 				{
 					System.out.print("First class or economy for " + name + "? ");
 					String flightClass = sc.nextLine();
-					//TODO method that makes preferences using contain() and finds the right seat
-					//TODO correspond each seat with a name
+					//TODO a smart algorithm that finds you a lovely seat
+					//TODO put seats together if they want to (or just automatically do it if they come in packs)
 					System.out.print("Do you have any seating preference? "
 							+ "Window, column, or middle? ");
 					String pref = sc.nextLine();
