@@ -55,11 +55,11 @@ public class SeatingCreator
 				{
 					System.out.print("First class or economy for " + name + "? ");
 					String flightClass = sc.nextLine();
+					System.out.print("Do you have any seating preference? "
+							+ "Window, column, middle, or none? ");
+					String pref = sc.nextLine();
 					//TODO a smart algorithm that finds you a lovely seat
 					//TODO put seats together if they want to (or just automatically do it if they come in packs)
-					System.out.print("Do you have any seating preference? "
-							+ "Window, column, or middle? ");
-					String pref = sc.nextLine();
 				}
 			}
 			else
