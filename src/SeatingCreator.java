@@ -82,7 +82,7 @@ public class SeatingCreator
 
 	private static int rowToInt(String row)
 	{
-		char c = row.charAt(0);
-		return Character.getNumericValue(c) + 1;
+		Character c = row.charAt(0);
+		return Character.getNumericValue(c) - 8;
 	}
 }
