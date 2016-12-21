@@ -28,7 +28,7 @@ public class SeatingCreator
 					|| reChoice.equalsIgnoreCase("manual"))
 			{
 				System.out.print("Please enter the name(s) you would like to "
-						+ "reserve the seats under: ");
+						+ "reserve the seat(s) under: ");
 				String names = sc.nextLine();
 				namesToArray(names);
 
@@ -40,21 +40,13 @@ public class SeatingCreator
 					String row = sc.nextLine();
 					System.out.print("Please enter your choice of column: ");
 					int column = sc.nextInt();
-					
-					if (plane.checkOccupied(flightClass, rowToInt(row), column) != true)
-					{
-						plane.occupySeat(name, flightClass, rowToInt(row), column);
-					}
-					else
-					{
-						System.out.println("Sorry, seat occupied."); //TODO return to the beginning of the loop
-					}
+					plane.occupySeat(name, flightClass, rowToInt(row), column);
 				}
 			}
 			else if (reChoice.substring(0, 4).equalsIgnoreCase("auto"))
 			{
 				System.out.print("Please enter the name(s) you would like to "
-						+ "reserve the seats under: ");
+						+ "reserve the seat(s) under: ");
 				String names = sc.nextLine();
 				namesToArray(names);
 
