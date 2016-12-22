@@ -2,11 +2,11 @@ public class Display
 {
 	public static void printSeating(Airplane airplane)
 	{		
-		System.out.println("  1 2 3 4");
+		System.out.println("    1 2 3 4");
 		char c = 'A';
 		for (int i = 0; i < airplane.NUMBER_OF_FIRST_CLASS_ROWS; i++)
 		{
-			System.out.print(c + " ");
+			System.out.print("  " + c + " ");
 			for (int j = 0; j < airplane.NUMBER_OF_FIRST_CLASS_AISLES; j++)
 			{
 				System.out.print(boolToLetter(airplane.checkOccupied("first", i, j)) + " ");

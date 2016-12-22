@@ -85,4 +85,14 @@ public class SeatingCreator
 		Character c = row.charAt(0);
 		return Character.getNumericValue(c) - 9;
 	}
+	
+	/**
+	 * 
+	 * @param sidePref
+	 */
+	private static void chooseSeat(String flightClass, String sidePref, 
+			String companion)
+	{
+		
+	}
 }
