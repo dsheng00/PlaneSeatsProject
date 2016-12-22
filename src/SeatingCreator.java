@@ -21,51 +21,47 @@ public class SeatingCreator
 		{
 			Display.printSeating(plane);
 			System.out.println();
-			System.out.print("Would you like to choose or automatically assign seats? ");
-			String reChoice = sc.nextLine();
-
-			if (reChoice.equalsIgnoreCase("choose")
-					|| reChoice.equalsIgnoreCase("manual"))
+			
+			System.out.print("Please enter the name(s) you would like to "
+					+ "reserve the seat(s) under: ");
+			String names = sc.nextLine();
+			namesToArray(names);
+			
+			for(String name : namesList)
 			{
-				System.out.print("Please enter the name(s) you would like to "
-						+ "reserve the seat(s) under: ");
-				String names = sc.nextLine();
-				namesToArray(names);
-
-				for(String name : namesList)
+				System.out.print(name.substring(0, 1).toUpperCase() + name.substring(1)
+						+ "Would you like to choose or "
+						+ "automatically assign seats? ");
+				String reChoice = sc.nextLine();
+				
+				if (reChoice.equalsIgnoreCase("choose")
+						|| reChoice.equalsIgnoreCase("manual"))
 				{
-					System.out.print("First class or economy for " + name + "? ");
+					System.out.print("First class or economy? ");
 					String flightClass = sc.nextLine();
 					System.out.print("Please enter your choice of row: ");
 					String row = sc.nextLine();
 					System.out.print("Please enter your choice of column: ");
-					int column = sc.nextInt();
-					plane.occupySeat(name, flightClass, rowToInt(row), column);
+					String column = sc.nextLine();
+					plane.occupySeat(name, flightClass, rowToInt(row), 
+								Integer.parseInt(column));
 				}
-			}
-			else if (reChoice.substring(0, 4).equalsIgnoreCase("auto"))
-			{
-				System.out.print("Please enter the name(s) you would like to "
-						+ "reserve the seat(s) under: ");
-				String names = sc.nextLine();
-				namesToArray(names);
-
-				for(String name : namesList)
+				else if (reChoice.substring(0, 4).equalsIgnoreCase("auto"))
 				{
-					System.out.print("First class or economy for " + name + "? ");
+					System.out.print("First class or economy? ");
 					String flightClass = sc.nextLine();
 					System.out.print("Do you have any seating preference? "
-							+ "Window, column, or middle? ");
+							+ "Window, column, middle, or none? ");
 					String pref = sc.nextLine();
-					//TODO method that makes preferences using contain() and finds the right seat
-					//TODO correspond each seat with a name
+					//TODO a smart algorithm that finds you a lovely seat
+					//TODO put seats together if they want to (or just automatically do it if they come in packs)
 				}
-			}
-			else
-			{
-				System.out.println("That is not a valid option. "
-						+ "We will reirect you to our non-existence help center"
-						+ " for further instructions.");
+				else
+				{
+					System.out.println("That is not a valid option. "
+							+ "We will reirect you to our non-existence help center"
+							+ " for further instructions.");
+				}
 			}
 			System.out.print("Continue? Y/N: ");
 			response = sc.nextLine();

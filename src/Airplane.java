@@ -41,7 +41,7 @@ public class Airplane
 				 || seatingClass.equalsIgnoreCase("second")
 				 || seatingClass.equalsIgnoreCase("2nd"))
 		{
-			economyClassSeats[row - 6][column - 1].occupy(passengerName);
+			economyClassSeats[row - 5][column - 1].occupy(passengerName);
 		}
 	}
 	
