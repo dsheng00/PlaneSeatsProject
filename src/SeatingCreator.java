@@ -18,16 +18,19 @@ public class SeatingCreator
 			System.out.println("Show seating: Enter 2");
 			System.out.println("Quit: Enter \"Quit\"");
 			String choice = sc.nextLine();
+			System.out.println();
 			
 			if (choice.equals("1"))
 			{
 				System.out.print("Would you like to choose or "
 								+ "automatically assign seats? ");
 				String reChoice = sc.nextLine();
+				System.out.println();
 				if (reChoice.equalsIgnoreCase("choose") || reChoice.equalsIgnoreCase("manual"))
 				{
 					System.out.print("First class or economy? ");
 					String flightClass = sc.nextLine();
+					System.out.println();
 					Display.printSeating(plane, flightClass);
 					System.out.print("Please enter your choice of row: ");
 					String row = sc.nextLine();
