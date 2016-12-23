@@ -14,7 +14,8 @@ public class Display
 				System.out.print("  " + c + " ");
 				for (int j = 1; j <= airplane.NUMBER_OF_FIRST_CLASS_AISLES; j++)
 				{
-					System.out.print(boolToLetter(airplane.checkOccupied("first", i, j)) + " ");
+					System.out.print(boolToLetter
+							(airplane.checkOccupied("first", i, j)) + " ");
 					if (j == airplane.NUMBER_OF_FIRST_CLASS_AISLES / 2)
 					{
 						System.out.print("  ");
@@ -36,7 +37,8 @@ public class Display
 				System.out.print(c + " ");
 				for (int j = 0; j < airplane.NUMBER_OF_ECONOMY_CLASS_AISLES; j++)
 				{
-					System.out.print(boolToLetter(airplane.checkOccupied("economy", i, j)) + " ");
+					System.out.print(boolToLetter
+							(airplane.checkOccupied("economy", i, j)) + " ");
 					if (j == airplane.NUMBER_OF_ECONOMY_CLASS_AISLES / 2)
 					{
 						System.out.print("  ");
@@ -55,7 +57,8 @@ public class Display
 				System.out.print("  " + c + " ");
 				for (int j = 1; j <= airplane.NUMBER_OF_FIRST_CLASS_AISLES; j++)
 				{
-					System.out.print(boolToLetter(airplane.checkOccupied("first", i, j)) + " ");
+					System.out.print(boolToLetter
+							(airplane.checkOccupied("first", i, j)) + " ");
 					if (j == airplane.NUMBER_OF_FIRST_CLASS_AISLES / 2)
 					{
 						System.out.print("  ");
@@ -72,7 +75,8 @@ public class Display
 				System.out.print(c + " ");
 				for (int j = 1; j <= airplane.NUMBER_OF_ECONOMY_CLASS_AISLES; j++)
 				{
-					System.out.print(boolToLetter(airplane.checkOccupied("economy", i, j)) + " ");
+					System.out.print(boolToLetter
+							(airplane.checkOccupied("economy", i, j)) + " ");
 					if (j == airplane.NUMBER_OF_ECONOMY_CLASS_AISLES / 2)
 					{
 						System.out.print("  ");
