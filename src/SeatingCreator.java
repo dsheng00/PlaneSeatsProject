@@ -33,9 +33,9 @@ public class SeatingCreator
 					Display.printSeating(plane, flightClass);
 					System.out.print("Please enter your choice of row: ");
 					String row = sc.nextLine();
-					System.out.print("Please enter your choice of column: ");
-					String column = sc.nextLine();
-					plane.occupySeat(flightClass, rowToInt(row), Integer.parseInt(column));
+					System.out.print("Please enter your choice of aisle: ");
+					String aisle = sc.nextLine();
+					plane.occupySeat(flightClass, rowToInt(row), Integer.parseInt(aisle));
 					System.out.println("Seat assigned!");
 				}
 					
@@ -75,9 +75,9 @@ public class SeatingCreator
 					}
 					else
 					{
-						rows = plane.NUMBER_OF_ECONOMY_CLASS_ROWS + plane.NUMBER_OF_FIRST_CLASS_ROWS;
 						aisles = plane.NUMBER_OF_ECONOMY_CLASS_AISLES;
 						startingRow = plane.NUMBER_OF_FIRST_CLASS_ROWS + 1;
+						rows = startingRow + plane.NUMBER_OF_ECONOMY_CLASS_ROWS;
 					}
 						
 					if (together == 3)
