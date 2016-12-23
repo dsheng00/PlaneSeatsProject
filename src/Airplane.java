@@ -1,6 +1,6 @@
 /**
  * Simulates an Airplane's seating.
- * @author Matthew Guo, Tenzin Loden, David Sheng, Eli Zheng
+ * @author Matthew Guo, Tenzin Loden, David Sheng, Eli Zhang
  * @version 1.0
  */
 public class Airplane
