@@ -44,7 +44,15 @@ public class SeatingCreator
 					System.out.print("First or economy class? ");
 					String flightClass = sc.nextLine();
 					
-					System.out.print("Enter the number of seats you would like reserved together (up to 3). ");
+					if (flightClass.equalsIgnoreCase("first"))
+					{
+						System.out.print("Enter the number of seats you would like reserved together (up to 2). ");
+					}
+					else
+					{
+						System.out.print("Enter the number of seats you would like reserved together (up to 3). ");
+					}
+					
 					int together = Integer.parseInt(sc.nextLine());
 					
 					String pref = "";
@@ -56,13 +64,16 @@ public class SeatingCreator
 					}
 					
 					int rows;
+					int aisles;
 					if (flightClass.equalsIgnoreCase("first"))
 					{
 						rows = plane.NUMBER_OF_FIRST_CLASS_ROWS;
+						aisles = plane.NUMBER_OF_FIRST_CLASS_AISLES;
 					}
 					else
 					{
 						rows = plane.NUMBER_OF_ECONOMY_CLASS_ROWS;
+						aisles = plane.NUMBER_OF_ECONOMY_CLASS_AISLES;
 					}
 						
 					if (together == 3)
@@ -70,21 +81,24 @@ public class SeatingCreator
 						boolean foundSeat = false;
 						for (int i = 1; i < rows; i++)
 						{
-							if ((foundSeat == false) && !plane.checkOccupied(flightClass, i, 1))
+							for (int j = 1; j < aisles - 2; j++)
 							{
-								if (!plane.checkOccupied(flightClass, i, 2))
+								if ((foundSeat == false) && !plane.checkOccupied(flightClass, i, j))
 								{
-									if (!plane.checkOccupied(flightClass, i, 3))
+									if (!plane.checkOccupied(flightClass, i, j + 1))
 									{
-										foundSeat = true;
-										plane.occupySeat(flightClass, i, 1);
-										plane.occupySeat(flightClass, i, 2);
-										plane.occupySeat(flightClass, i, 3);
-										System.out.println("Seats assigned!");
+										if (!plane.checkOccupied(flightClass, i, j + 2))
+										{
+											foundSeat = true;
+											plane.occupySeat(flightClass, i, j);
+											plane.occupySeat(flightClass, i, j + 1);
+											plane.occupySeat(flightClass, i, j + 2);
+											System.out.println("Seats assigned!");
+										}
 									}
 								}
 							}
-						}
+						}	
 					}
 				
 					else if (together == 2)
@@ -92,28 +106,21 @@ public class SeatingCreator
 						boolean foundSeat = false;
 						for (int i = 1; i < rows; i++)
 						{
-							if ((foundSeat == false) && !plane.checkOccupied(flightClass, i, 1))
+							for (int j = 1; j < aisles - 1; j++)
 							{
-								if (!plane.checkOccupied(flightClass, i, 2))
+								if ((foundSeat == false) && !plane.checkOccupied(flightClass, i, j))
 								{
-									foundSeat = true;
-									plane.occupySeat(flightClass, i, 1);
-									plane.occupySeat(flightClass, i, 2);
-									System.out.println("Seats assigned!");
+									if (!plane.checkOccupied(flightClass, i, j + 1))
+									{
+										if (!plane.checkOccupied(flightClass, i, j + 2))
+										{
+											foundSeat = true;
+											plane.occupySeat(flightClass, i, j);
+											plane.occupySeat(flightClass, i, j + 1);
+											System.out.println("Seats assigned!");
+										}
+									}
 								}
-								
-							}
-							
-							if ((foundSeat == false) && !plane.checkOccupied(flightClass, i, 2))
-							{
-								if (!plane.checkOccupied(flightClass, i, 3))
-								{
-									foundSeat = true;
-									plane.occupySeat(flightClass, i, 2);
-									plane.occupySeat(flightClass, i, 3);
-									System.out.println("Seats assigned!");
-								}
-								
 							}
 						}
 					}
@@ -127,6 +134,13 @@ public class SeatingCreator
 							{
 								foundSeat = true;
 								plane.occupySeat(flightClass, i, 1);
+								System.out.println("Seat assigned!");
+							}
+							
+							if ((foundSeat == false) && !plane.checkOccupied(flightClass, i, aisles))
+							{
+								foundSeat = true;
+								plane.occupySeat(flightClass, i, aisles);
 								System.out.println("Seat assigned!");
 							}
 						}
