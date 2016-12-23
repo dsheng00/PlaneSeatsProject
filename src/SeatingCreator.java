@@ -144,12 +144,8 @@ public class SeatingCreator
 								plane.occupySeat(flightClass, i, 1);
 								System.out.println("Seat assigned!");
 							}
-<<<<<<< HEAD
 							else if ((foundSeat == false) 
-									&& !plane.checkOccupied(flightClass, i, aisles - 1))
-=======
-							else if ((foundSeat == false) && !plane.checkOccupied(flightClass, i, aisles))
->>>>>>> origin/master
+									&& !plane.checkOccupied(flightClass, i, aisles))
 							{
 								foundSeat = true;
 								plane.occupySeat(flightClass, i, aisles);
@@ -170,12 +166,9 @@ public class SeatingCreator
 								plane.occupySeat(flightClass, i, 2);
 								System.out.println("Seat assigned!");
 							}
-<<<<<<< HEAD
 							else if ((foundSeat == false) 
-									&& !plane.checkOccupied(flightClass, i, aisles - 2))
-=======
-							else if ((foundSeat == false) && !plane.checkOccupied(flightClass, i, aisles - 1))
->>>>>>> origin/master
+									&& !plane.checkOccupied(flightClass, i, aisles - 1))
+
 							{
 								foundSeat = true;
 								plane.occupySeat(flightClass, i, aisles - 1);
@@ -196,12 +189,9 @@ public class SeatingCreator
 								plane.occupySeat(flightClass, i, 3);
 								System.out.println("Seat assigned!");
 							}
-<<<<<<< HEAD
+
 							else if ((foundSeat == false) 
-									&& !plane.checkOccupied(flightClass, i, aisles - 3))
-=======
-							else if ((foundSeat == false) && !plane.checkOccupied(flightClass, i, aisles - 2))
->>>>>>> origin/master
+									&& !plane.checkOccupied(flightClass, i, aisles - 2))
 							{
 								foundSeat = true;
 								plane.occupySeat(flightClass, i, aisles - 2);
