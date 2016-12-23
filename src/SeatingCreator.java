@@ -111,19 +111,16 @@ public class SeatingCreator
 						boolean foundSeat = false;
 						for (int i = startingRow; i < rows; i++)
 						{
-							for (int j = 1; j < aisles - 1; j++)
+							for (int j = 1; j < aisles; j++)
 							{
 								if ((foundSeat == false) && !plane.checkOccupied(flightClass, i, j))
 								{
 									if (!plane.checkOccupied(flightClass, i, j + 1))
 									{
-										if (!plane.checkOccupied(flightClass, i, j + 2))
-										{
-											foundSeat = true;
-											plane.occupySeat(flightClass, i, j);
-											plane.occupySeat(flightClass, i, j + 1);
-											System.out.println("Seats assigned!");
-										}
+										foundSeat = true;
+										plane.occupySeat(flightClass, i, j);
+										plane.occupySeat(flightClass, i, j + 1);
+										System.out.println("Seats assigned!");
 									}
 								}
 							}
