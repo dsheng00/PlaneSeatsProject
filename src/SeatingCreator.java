@@ -149,7 +149,7 @@ public class SeatingCreator
 								System.out.println("Seat assigned!");
 							}
 							
-							if ((foundSeat == false) && !plane.checkOccupied(flightClass, i, aisles))
+							if ((foundSeat == false) && !plane.checkOccupied(flightClass, i, aisles - 1))
 							{
 								foundSeat = true;
 								plane.occupySeat(flightClass, i, aisles);
