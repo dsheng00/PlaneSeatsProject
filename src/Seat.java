@@ -1,33 +1,24 @@
 public class Seat
 {
 	private boolean occupied;
-	private String passengerName;
   
 	public Seat()
 	{
   		occupied = false;
-  		passengerName = "";
 	}
 
-	public void occupy(String name)
+	public void occupy()
 	{
 		occupied = true;
-		passengerName = name;
 	}
 
 	public void unoccupy()
 	{
 		occupied = false;
-		passengerName = "";
 	}
 	
 	public boolean checkOccupancy()
 	{
 		return occupied;
-	}
-  
-  	public String getPassengerName()
-  	{
-    		return passengerName;
 	}
 }

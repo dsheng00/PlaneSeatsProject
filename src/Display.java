@@ -2,7 +2,7 @@ public class Display
 {
 	public static void printSeating(Airplane airplane)
 	{		
-		System.out.println("    1 2   3 4");
+		System.out.println("    1 2   3 4    ");
 		char c = 'A';
 		for (int i = 0; i < airplane.NUMBER_OF_FIRST_CLASS_ROWS; i++)
 		{
@@ -20,7 +20,7 @@ public class Display
 		}
 		System.out.println();
 		
-		System.out.println("  1 2 3   4 5 6");
+		System.out.println("  1 2 3   4 5 6  ");
 		for (int i = 0; i < airplane.NUMBER_OF_ECONOMY_CLASS_ROWS; i++)
 		{
 			System.out.print(c + " ");
