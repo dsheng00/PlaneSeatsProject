@@ -42,10 +42,10 @@ public class Display
 		{
 			c = 'F';
 			System.out.println("  1 2 3   4 5 6  ");
-			for (int i = 0; i < airplane.NUMBER_OF_ECONOMY_CLASS_ROWS; i++)
+			for (int i = 1; i <= airplane.NUMBER_OF_ECONOMY_CLASS_ROWS; i++)
 			{
 				System.out.print(c + " ");
-				for (int j = 0; j < airplane.NUMBER_OF_ECONOMY_CLASS_AISLES; j++)
+				for (int j = 1; j <= airplane.NUMBER_OF_ECONOMY_CLASS_AISLES; j++)
 				{
 					System.out.print(boolToLetter
 							(airplane.checkOccupied("economy", i, j)) + " ");
