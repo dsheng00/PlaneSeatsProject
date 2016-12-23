@@ -2,6 +2,7 @@ public class Display
 {
 	public static void printSeating(Airplane airplane, String section)
 	{	
+		System.out.println();
 		char c = 'A';
 
 		if (section.equalsIgnoreCase("first")
