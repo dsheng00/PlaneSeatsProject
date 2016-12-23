@@ -62,12 +62,12 @@ public class Airplane
 		if (seatingClass.equalsIgnoreCase("first")
 			|| seatingClass.equalsIgnoreCase("1st"))
 		{
-			return firstClassSeats[row][column].checkOccupancy();
+			return firstClassSeats[row - 1][column - 1].checkOccupancy();
 		}
 		else if (seatingClass.equalsIgnoreCase("economy")
 				|| seatingClass.equalsIgnoreCase("econ"))
 		{
-			return economyClassSeats[row][column].checkOccupancy();
+			return economyClassSeats[row - 1][column - 1].checkOccupancy();
 		}
 		return false;
 	}
