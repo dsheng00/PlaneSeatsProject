@@ -25,7 +25,6 @@ public class SeatingCreator
 				System.out.print("Would you like to choose or "
 								+ "automatically assign seats? ");
 				String reChoice = sc.nextLine();
-				System.out.println();
 				if (reChoice.equalsIgnoreCase("choose") || reChoice.equalsIgnoreCase("manual"))
 				{
 					System.out.print("First class or economy? ");
@@ -86,7 +85,7 @@ public class SeatingCreator
 						boolean foundSeat = false;
 						for (int i = startingRow; i < rows; i++)
 						{
-							for (int j = 1; j < aisles - 2; j++)
+							for (int j = 1; j < aisles - 1; j++)
 							{
 								if ((foundSeat == false) && !plane.checkOccupied(flightClass, i, j))
 								{
@@ -143,10 +142,10 @@ public class SeatingCreator
 								plane.occupySeat(flightClass, i, 1);
 								System.out.println("Seat assigned!");
 							}
-							else if ((foundSeat == false) && !plane.checkOccupied(flightClass, i, aisles - 1))
+							else if ((foundSeat == false) && !plane.checkOccupied(flightClass, i, aisles))
 							{
 								foundSeat = true;
-								plane.occupySeat(flightClass, i, aisles - 1);
+								plane.occupySeat(flightClass, i, aisles);
 								System.out.println("Seat assigned!");
 							}
 						}
@@ -163,10 +162,10 @@ public class SeatingCreator
 								plane.occupySeat(flightClass, i, 2);
 								System.out.println("Seat assigned!");
 							}
-							else if ((foundSeat == false) && !plane.checkOccupied(flightClass, i, aisles - 2))
+							else if ((foundSeat == false) && !plane.checkOccupied(flightClass, i, aisles - 1))
 							{
 								foundSeat = true;
-								plane.occupySeat(flightClass, i, aisles - 2);
+								plane.occupySeat(flightClass, i, aisles - 1);
 								System.out.println("Seat assigned!");
 							}
 						}
@@ -183,10 +182,10 @@ public class SeatingCreator
 								plane.occupySeat(flightClass, i, 3);
 								System.out.println("Seat assigned!");
 							}
-							else if ((foundSeat == false) && !plane.checkOccupied(flightClass, i, aisles - 3))
+							else if ((foundSeat == false) && !plane.checkOccupied(flightClass, i, aisles - 2))
 							{
 								foundSeat = true;
-								plane.occupySeat(flightClass, i, aisles - 3);
+								plane.occupySeat(flightClass, i, aisles - 2);
 								System.out.println("Seat assigned!");
 							}
 						}
