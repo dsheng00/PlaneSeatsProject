@@ -37,8 +37,7 @@ public class SeatingCreator
 				
 				for(String name : namesList)
 				{
-					System.out.print(name.substring(0, 1).toUpperCase() + name.substring(1)
-							+ "Would you like to choose or "
+					System.out.print("Would you like to choose or "
 							+ "automatically assign seats? ");
 					String reChoice = sc.nextLine();
 					
@@ -134,15 +133,5 @@ public class SeatingCreator
 	{
 		Character c = row.charAt(0);
 		return Character.getNumericValue(c) - 9;
-	}
-	
-	/**
-	 * 
-	 * @param sidePref
-	 */
-	private static void chooseSeat(String flightClass, String sidePref, 
-			String companion)
-	{
-		
 	}
 }
