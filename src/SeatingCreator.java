@@ -170,9 +170,10 @@ public class SeatingCreator
 				Display.printSeating(plane);
 			}
 			
-			else if (choice.equals("Quit"))
+			else if (choice.equalsIgnoreCase("Quit"))
 			{
 				response = choice;
+				System.out.println("Seat reserving complete.");
 			}
 			
 			else
