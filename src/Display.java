@@ -1,5 +1,15 @@
+/**
+ * Simulates a display system for the airplane seat reservation system.
+ * @author Matthew Guo, Tenzin Loden, David Sheng, Eli Zheng
+ * @version 1.0
+ */
 public class Display 
 {
+	/**
+	 * Prints the seating using an Airplane object and a wanted section of the plane.
+	 * @param airplane An airplane object containing the layout of the plane
+	 * @param section Sections of the plane to be printed, including its entirety
+	 */
 	public static void printSeating(Airplane airplane, String section)
 	{	
 		System.out.println();
@@ -88,6 +98,11 @@ public class Display
 		}
 	}
 	
+	/**
+	 * Converts a boolean value to a letter indicating whether a seat is occupied or not.
+	 * @param x The boolean value indicating a seat's occupancy to be converted
+	 * @return The converted letter indication the occupancy of a seat
+	 */
 	public static String boolToLetter(boolean x)
 	{
 		if (x)

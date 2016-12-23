@@ -1,3 +1,8 @@
+/**
+ * Simulates an Airplane's seating.
+ * @author Matthew Guo, Tenzin Loden, David Sheng, Eli Zheng
+ * @version 1.0
+ */
 public class Airplane
 {
 	public final int NUMBER_OF_FIRST_CLASS_ROWS = 5;
@@ -7,6 +12,11 @@ public class Airplane
 	private Seat[][] firstClassSeats;
 	private Seat[][] economyClassSeats;
 
+	/**
+	 * Creates an airplane with 2 classes: first class and economy. 
+	 * First class has 5 rows and 2 aisles on each side. 
+	 * Economy class has 15 rows and 3 seats on each side.
+	 */
 	public Airplane()
 	{
 		firstClassSeats = new Seat[NUMBER_OF_FIRST_CLASS_ROWS][];
@@ -29,6 +39,12 @@ public class Airplane
 		}
 	}
 
+	/**
+	 * Occupies a seat using the seat's class, row number, and aisle number.
+	 * @param seatingClass Class of the seat
+	 * @param row Row number of a seat
+	 * @param aisle Aisle number of a seat
+	 */
 	public void occupySeat(String seatingClass, int row, int aisle)
 	{
 		if (seatingClass.equalsIgnoreCase("first")
@@ -43,6 +59,12 @@ public class Airplane
 		}
 	}
 
+	/**
+	 * Removes a seat using the seat's class, row number, and aisle number.
+	 * @param seatingClass Class of the seat
+	 * @param row Row number of a seat
+	 * @param aisle Aisle number of a seat
+	 */
 	public void removeSeat(String seatingClass, int row, int aisle)
 	{
 		if (seatingClass.equalsIgnoreCase("first")
@@ -57,6 +79,13 @@ public class Airplane
 		}
 	}
 
+	/**
+	 * Checks if a seat is occupied.
+	 * @param seatingClass Class of the seat
+	 * @param row Row number of a seat
+	 * @param aisle Aisle number of a seat
+	 * @return If a seat is occupied or not
+	 */
 	public boolean checkOccupied(String seatingClass, int row, int aisle)
 	{
 		if (seatingClass.equalsIgnoreCase("first")

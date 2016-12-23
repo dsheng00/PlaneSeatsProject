@@ -1,4 +1,10 @@
 import java.util.Scanner;
+
+/**
+ * Simulates a seating system for an airplane.
+ * @author @author Matthew Guo, Tenzin Loden, David Sheng, Eli Zheng
+ * @version 1.0
+ */
 public class SeatingCreator
 {
 	public static void main(String args[])
@@ -227,6 +233,11 @@ public class SeatingCreator
 		sc.close();
 	}
 
+	/**
+	 * Converts a row letter into a char which then is converted into an int.
+	 * @param row Row letter of a seat
+	 * @return Row number of a seat
+	 */
 	private static int rowToInt(String row)
 	{
 		Character c = row.charAt(0);
