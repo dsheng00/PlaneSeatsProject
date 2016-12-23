@@ -2,7 +2,7 @@ import java.util.Scanner;
 
 /**
  * Simulates a seating system for an airplane.
- * @author @author Matthew Guo, Tenzin Loden, David Sheng, Eli Zheng
+ * @author @author Matthew Guo, Tenzin Loden, David Sheng, Eli Zhang
  * @version 1.0
  */
 public class SeatingCreator

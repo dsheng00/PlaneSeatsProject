@@ -1,6 +1,6 @@
 /**
  * Simulates a display system for the airplane seat reservation system.
- * @author Matthew Guo, Tenzin Loden, David Sheng, Eli Zheng
+ * @author Matthew Guo, Tenzin Loden, David Sheng, Eli Zhang
  * @version 1.0
  */
 public class Display 
