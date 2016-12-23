@@ -24,14 +24,6 @@ public class Seat
 	}
 
 	/**
-	 * Unoccupies a seat.
-	 */
-	public void unoccupy()
-	{
-		occupied = false;
-	}
-	
-	/**
 	 * Checks the occupancy status of a seat.
 	 * @return
 	 */
