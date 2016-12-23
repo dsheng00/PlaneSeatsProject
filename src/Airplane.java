@@ -60,26 +60,6 @@ public class Airplane
 	}
 
 	/**
-	 * Removes a seat using the seat's class, row number, and aisle number.
-	 * @param seatingClass Class of the seat
-	 * @param row Row number of a seat
-	 * @param aisle Aisle number of a seat
-	 */
-	public void removeSeat(String seatingClass, int row, int aisle)
-	{
-		if (seatingClass.equalsIgnoreCase("first")
-				|| seatingClass.equalsIgnoreCase("1st"))
-		{
-			firstClassSeats[row - 1][aisle - 1].unoccupy();
-		}
-		else if (seatingClass.equalsIgnoreCase("economy")
-				|| seatingClass.equalsIgnoreCase("econ"))
-		{
-			economyClassSeats[row - 1][aisle - 1].unoccupy();
-		}
-	}
-
-	/**
 	 * Checks if a seat is occupied.
 	 * @param seatingClass Class of the seat
 	 * @param row Row number of a seat
