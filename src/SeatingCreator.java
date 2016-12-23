@@ -11,7 +11,6 @@ public class SeatingCreator
 
 		while (!response.equalsIgnoreCase(SENTINEL))
 		{
-			System.out.println();
 			System.out.println("Option List:");
 			System.out.println("-------------");
 			System.out.println("Add passengers: Enter 1");

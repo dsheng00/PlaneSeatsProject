@@ -49,6 +49,7 @@ public class Display
 		
 		if (section.equalsIgnoreCase("whole"))
 		{
+			c = 'F';
 			System.out.println("    1 2   3 4    ");
 			for (int i = 0; i < airplane.NUMBER_OF_FIRST_CLASS_ROWS; i++)
 			{
