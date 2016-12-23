@@ -75,7 +75,7 @@ public class SeatingCreator
 					}
 					else
 					{
-						rows = plane.NUMBER_OF_ECONOMY_CLASS_ROWS;
+						rows = plane.NUMBER_OF_ECONOMY_CLASS_ROWS + plane.NUMBER_OF_FIRST_CLASS_ROWS;
 						aisles = plane.NUMBER_OF_ECONOMY_CLASS_AISLES;
 						startingRow = plane.NUMBER_OF_FIRST_CLASS_ROWS + 1;
 					}

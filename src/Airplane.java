@@ -29,45 +29,45 @@ public class Airplane
 		}
 	}
 	
-	public void occupySeat(String seatingClass, int row, int column)
+	public void occupySeat(String seatingClass, int row, int aisle)
 	{
 		if (seatingClass.equalsIgnoreCase("first")
 				|| seatingClass.equalsIgnoreCase("1st"))
 		{
-			firstClassSeats[row - 1][column - 1].occupy();
+			firstClassSeats[row - 1][aisle - 1].occupy();
 		}
 		else if (seatingClass.equalsIgnoreCase("economy")
 				|| seatingClass.equalsIgnoreCase("econ"))
 		{
-			economyClassSeats[row - NUMBER_OF_FIRST_CLASS_ROWS - 1][column - 1].occupy();
+			economyClassSeats[row - NUMBER_OF_FIRST_CLASS_ROWS - 1][aisle - 1].occupy();
 		}
 	}
 	
-	public void removeSeat(String seatingClass, int row, int column)
+	public void removeSeat(String seatingClass, int row, int aisle)
 	{
 		if (seatingClass.equalsIgnoreCase("first")
 				|| seatingClass.equalsIgnoreCase("1st"))
 		{
-			firstClassSeats[row - 1][column - 1].unoccupy();
+			firstClassSeats[row - 1][aisle - 1].unoccupy();
 		}
 		else if (seatingClass.equalsIgnoreCase("economy")
 				|| seatingClass.equalsIgnoreCase("econ"))
 		{
-			economyClassSeats[row - 1][column - 1].unoccupy();
+			economyClassSeats[row - 1][aisle - 1].unoccupy();
 		}
 	}
 	
-	public boolean checkOccupied(String seatingClass, int row, int column)
+	public boolean checkOccupied(String seatingClass, int row, int aisle)
 	{
 		if (seatingClass.equalsIgnoreCase("first")
 			|| seatingClass.equalsIgnoreCase("1st"))
 		{
-			return firstClassSeats[row - 1][column - 1].checkOccupancy();
+			return firstClassSeats[row - 1][aisle - 1].checkOccupancy();
 		}
 		else if (seatingClass.equalsIgnoreCase("economy")
 				|| seatingClass.equalsIgnoreCase("econ"))
 		{
-			return economyClassSeats[row - 1][column - 1].checkOccupancy();
+			return economyClassSeats[row - 1][aisle - 1].checkOccupancy();
 		}
 		return false;
 	}
