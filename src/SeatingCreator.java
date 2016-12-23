@@ -62,22 +62,26 @@ public class SeatingCreator
 					}
 					
 					int rows;
+					int startingRow;
 					int aisles;
+					
 					if (flightClass.equalsIgnoreCase("first"))
 					{
 						rows = plane.NUMBER_OF_FIRST_CLASS_ROWS;
 						aisles = plane.NUMBER_OF_FIRST_CLASS_AISLES;
+						startingRow = 1;
 					}
 					else
 					{
 						rows = plane.NUMBER_OF_ECONOMY_CLASS_ROWS;
 						aisles = plane.NUMBER_OF_ECONOMY_CLASS_AISLES;
+						startingRow = plane.NUMBER_OF_FIRST_CLASS_ROWS + 1;
 					}
 						
 					if (together == 3)
 					{
 						boolean foundSeat = false;
-						for (int i = 1; i < rows; i++)
+						for (int i = startingRow; i < rows; i++)
 						{
 							for (int j = 1; j < aisles - 2; j++)
 							{
@@ -103,7 +107,7 @@ public class SeatingCreator
 					else if (together == 2)
 					{
 						boolean foundSeat = false;
-						for (int i = 1; i < rows; i++)
+						for (int i = startingRow; i < rows; i++)
 						{
 							for (int j = 1; j < aisles - 1; j++)
 							{
@@ -128,7 +132,7 @@ public class SeatingCreator
 					else if (pref.equalsIgnoreCase("window"))
 					{
 						boolean foundSeat = false;
-						for (int i = 1; i < rows; i++)
+						for (int i = startingRow; i < rows; i++)
 						{
 							if ((foundSeat == false) && !plane.checkOccupied(flightClass, i, 1))
 							{
@@ -148,7 +152,7 @@ public class SeatingCreator
 					else if (pref.equalsIgnoreCase("middle"))
 					{
 						boolean foundSeat = false;
-						for (int i = 1; i < rows; i++)
+						for (int i = startingRow; i < rows; i++)
 						{
 							if ((foundSeat == false) && !plane.checkOccupied(flightClass, i, 2))
 							{
@@ -168,7 +172,7 @@ public class SeatingCreator
 					else if (pref.equalsIgnoreCase("aisle"))
 					{
 						boolean foundSeat = false;
-						for (int i = 1; i < rows; i++)
+						for (int i = startingRow; i < rows; i++)
 						{
 							if ((foundSeat == false) && !plane.checkOccupied(flightClass, i, 3))
 							{
