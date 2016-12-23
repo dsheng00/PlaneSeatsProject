@@ -65,9 +65,9 @@ public class SeatingCreator
 						
 					if (together == 3)
 					{
+						boolean foundSeat = false;
 						for (int i = 1; i < rows; i++)
 						{
-							boolean foundSeat = false;
 							if ((foundSeat == false) && !plane.checkOccupied(flightClass, i, 1))
 							{
 								if (!plane.checkOccupied(flightClass, i, 2))
@@ -87,9 +87,9 @@ public class SeatingCreator
 				
 					else if (together == 2)
 					{
+						boolean foundSeat = false;
 						for (int i = 1; i < rows; i++)
 						{
-							boolean foundSeat = false;
 							if ((foundSeat == false) && !plane.checkOccupied(flightClass, i, 1))
 							{
 								if (!plane.checkOccupied(flightClass, i, 2))
@@ -118,9 +118,9 @@ public class SeatingCreator
 					
 					else if (pref.equalsIgnoreCase("window"))
 					{
+						boolean foundSeat = false;
 						for (int i = 1; i < rows; i++)
 						{
-							boolean foundSeat = false;
 							if ((foundSeat == false) && !plane.checkOccupied(flightClass, i, 1))
 							{
 								foundSeat = true;
@@ -132,9 +132,9 @@ public class SeatingCreator
 						
 					else if (pref.equalsIgnoreCase("middle"))
 					{
+						boolean foundSeat = false;
 						for (int i = 1; i < rows; i++)
 						{
-							boolean foundSeat = false;
 							if ((foundSeat == false) && !plane.checkOccupied(flightClass, i, 2))
 							{
 								foundSeat = true;
