@@ -57,7 +57,11 @@ public class Airplane
 		else if (seatingClass.equalsIgnoreCase("economy")
 				|| seatingClass.equalsIgnoreCase("econ"))
 		{
+<<<<<<< HEAD
 			economyClassSeats[row - 6][aisle - 1].occupy();
+=======
+			economyClassSeats[row - NUMBER_OF_FIRST_CLASS_ROWS - 1][column - 1].occupy();
+>>>>>>> origin/master
 		}
 	}
 	
