@@ -37,9 +37,7 @@ public class Airplane
 			firstClassSeats[row - 1][column - 1].occupy();
 		}
 		else if (seatingClass.equalsIgnoreCase("economy")
-				|| seatingClass.equalsIgnoreCase("econ")
-				|| seatingClass.equalsIgnoreCase("second")
-				|| seatingClass.equalsIgnoreCase("2nd"))
+				|| seatingClass.equalsIgnoreCase("econ"))
 		{
 			economyClassSeats[row - 6][column - 1].occupy();
 		}
@@ -53,9 +51,7 @@ public class Airplane
 			firstClassSeats[row - 1][column - 1].unoccupy();
 		}
 		else if (seatingClass.equalsIgnoreCase("economy")
-				|| seatingClass.equalsIgnoreCase("econ")
-				|| seatingClass.equalsIgnoreCase("second")
-				|| seatingClass.equalsIgnoreCase("2nd"))
+				|| seatingClass.equalsIgnoreCase("econ"))
 		{
 			economyClassSeats[row - 1][column - 1].unoccupy();
 		}
@@ -69,9 +65,7 @@ public class Airplane
 			return firstClassSeats[row][column].checkOccupancy();
 		}
 		else if (seatingClass.equalsIgnoreCase("economy")
-				|| seatingClass.equalsIgnoreCase("econ")
-				|| seatingClass.equalsIgnoreCase("second")
-				|| seatingClass.equalsIgnoreCase("2nd"))
+				|| seatingClass.equalsIgnoreCase("econ"))
 		{
 			return economyClassSeats[row][column].checkOccupancy();
 		}

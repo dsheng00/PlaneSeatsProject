@@ -25,10 +25,8 @@ public class Display
 			System.out.println();
 		}
 		
-		if (section.equalsIgnoreCase("econ")
-				|| section.equalsIgnoreCase("econ")
-				|| section.equalsIgnoreCase("second")
-				|| section.equalsIgnoreCase("2nd"))
+		if (section.equalsIgnoreCase("economy")
+				|| section.equalsIgnoreCase("econ"))
 		{
 			System.out.println("  1 2 3   4 5 6  ");
 			for (int i = 0; i < airplane.NUMBER_OF_ECONOMY_CLASS_ROWS; i++)
