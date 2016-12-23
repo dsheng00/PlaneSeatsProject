@@ -31,7 +31,8 @@ public class SeatingCreator
 				System.out.print("Would you like to choose or "
 								+ "automatically assign seats? ");
 				String reChoice = sc.nextLine();
-				if (reChoice.equalsIgnoreCase("choose") || reChoice.equalsIgnoreCase("manual"))
+				if (reChoice.equalsIgnoreCase("choose") 
+						|| reChoice.equalsIgnoreCase("manual"))
 				{
 					System.out.print("First class or economy? ");
 					String flightClass = sc.nextLine();
@@ -165,7 +166,8 @@ public class SeatingCreator
 								plane.occupySeat(flightClass, i, 1);
 								System.out.println("Seat assigned!");
 							}
-							if ((foundSeat == false) && !plane.checkOccupied(flightClass, i, aisles))
+							if ((foundSeat == false) 
+									&& !plane.checkOccupied(flightClass, i, aisles))
 							{
 								foundSeat = true;
 								plane.occupySeat(flightClass, i, aisles);
