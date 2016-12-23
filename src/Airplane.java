@@ -76,7 +76,8 @@ public class Airplane
 		else if (seatingClass.equalsIgnoreCase("economy")
 				|| seatingClass.equalsIgnoreCase("econ"))
 		{
-			return economyClassSeats[row - 1][aisle - 1].checkOccupancy();
+			return economyClassSeats[row - 1]
+					[aisle - 1].checkOccupancy();
 		}
 		return false;
 	}
