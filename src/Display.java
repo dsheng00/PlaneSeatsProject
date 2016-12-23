@@ -1,7 +1,7 @@
-public class Display
+public class Display 
 {
 	public static void printSeating(Airplane airplane, String section)
-	{
+	{	
 		System.out.println();
 		char c = 'A';
 
@@ -26,7 +26,7 @@ public class Display
 			}
 			System.out.println();
 		}
-
+		
 		if (section.equalsIgnoreCase("economy")
 				|| section.equalsIgnoreCase("econ"))
 		{
@@ -48,7 +48,7 @@ public class Display
 				c++;
 			}
 		}
-
+		
 		if (section.equalsIgnoreCase("whole"))
 		{
 			System.out.println("    1 2   3 4    ");
@@ -68,7 +68,7 @@ public class Display
 				c++;
 			}
 			System.out.println();
-
+			
 			System.out.println("  1 2 3   4 5 6  ");
 			for (int i = 1; i <= airplane.NUMBER_OF_ECONOMY_CLASS_ROWS; i++)
 			{
@@ -87,7 +87,7 @@ public class Display
 			}
 		}
 	}
-
+	
 	public static String boolToLetter(boolean x)
 	{
 		if (x)
