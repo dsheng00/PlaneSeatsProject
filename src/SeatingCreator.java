@@ -27,6 +27,8 @@ public class SeatingCreator
 				String reChoice = sc.nextLine();
 				if (reChoice.equalsIgnoreCase("choose") || reChoice.equalsIgnoreCase("manual"))
 				{
+					Display.printSeating(plane);
+					System.out.println();
 					System.out.print("First class or economy? ");
 					String flightClass = sc.nextLine();
 					System.out.print("Please enter your choice of row: ");
