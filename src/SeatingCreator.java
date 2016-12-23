@@ -12,7 +12,6 @@ public class SeatingCreator
 
 		while (!response.equalsIgnoreCase(SENTINEL))
 		{
-			System.out.println();
 			System.out.println("Option List:");
 			System.out.println("-------------");
 			System.out.println("Add passengers: Enter 1");
@@ -22,15 +21,17 @@ public class SeatingCreator
 			
 			if (choice.equals("1"))
 			{
+				System.out.println();
 				System.out.print("Would you like to choose or "
 								+ "automatically assign seats? ");
 				String reChoice = sc.nextLine();
 				if (reChoice.equalsIgnoreCase("choose") || reChoice.equalsIgnoreCase("manual"))
 				{
-					Display.printSeating(plane);
 					System.out.println();
 					System.out.print("First class or economy? ");
 					String flightClass = sc.nextLine();
+					System.out.println();
+					Display.printSeating(plane, flightClass);
 					System.out.print("Please enter your choice of row: ");
 					String row = sc.nextLine();
 					System.out.print("Please enter your choice of column: ");
@@ -56,7 +57,8 @@ public class SeatingCreator
 					}
 					
 					int rows;
-					if (flightClass.equalsIgnoreCase("first"))
+					if (flightClass.equalsIgnoreCase("first")
+							|| flightClass.equalsIgnoreCase("1st"))
 					{
 						rows = plane.NUMBER_OF_FIRST_CLASS_ROWS;
 					}
@@ -85,6 +87,7 @@ public class SeatingCreator
 								}
 							}
 						}
+						Display.printSeating(plane, flightClass);
 					}
 				
 					else if (together == 2)
@@ -113,9 +116,9 @@ public class SeatingCreator
 									plane.occupySeat(flightClass, i, 3);
 									System.out.println("Seats assigned!");
 								}
-								
 							}
 						}
+						Display.printSeating(plane, flightClass);
 					}
 					
 					else if (pref.equalsIgnoreCase("window"))
@@ -169,7 +172,7 @@ public class SeatingCreator
 			
 			else if (choice.equals("2"))
 			{
-				Display.printSeating(plane);
+				Display.printSeating(plane, "whole");
 			}
 			
 			else if (choice.equalsIgnoreCase("Quit"))
