@@ -37,6 +37,7 @@ public class SeatingCreator
 					String flightClass = sc.nextLine();
 					System.out.println();
 					Display.printSeating(plane, flightClass);
+					System.out.println();
 					System.out.print("Please enter your choice of row: ");
 					String row = sc.nextLine();
 					System.out.print("Please enter your choice of aisle: ");
